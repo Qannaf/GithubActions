@@ -6,13 +6,6 @@
 namespace functionsC
 {
 	int Cube(const int& x);
-
-	class BankAccount
-	{
-	public:
-		int balance;
-		BankAccount(const int& balance = 1) :balance{ balance } { }
-	};
 }
 
 #endif // !FUNCTIONSC_H
