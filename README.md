@@ -1,3 +1,5 @@
+# Using GitHub Actions with C++ and CMake
+
 <div class="entry-content"><p>In this post I am going to provide a GitHub Actions configuration yaml file for C++ projects using CMake.</p>
 
 <p><a href="https://github.com/features/actions">GitHub Actions</a> is a CI/CD infrastructure provided by GitHub. GitHub Actions
@@ -51,7 +53,7 @@ make distcheck
 </div>
  </figure></notextile></div>
 
-<p>This is not something you can use with CMake though <img alt="smile" src="/images/emoji/unicode/1f604.png" class="emoji"></p>
+<p>This is not something you can use with CMake though <img alt="smile" src="/images/smile.png" class="emoji"></p>
 
 <h1 id="hello-world">Hello World</h1>
 
@@ -85,7 +87,7 @@ add_test(NAME main COMMAND main)
 </div>
  </figure></notextile></div>
 
-<p><strong>TL;DR</strong> see the project on <a href="https://github.com/cristianadam/HelloWorld/">GitHub</a>.</p>
+<p><strong>TL;DR</strong> see the project on <a href="https://github.com/Qannaf/GithubActions">GitHub</a>.</p>
 
 <!-- more -->
 
@@ -164,7 +166,7 @@ can see that CMake is installed on all runners, but with different versions:</p>
 <p>CMake 3.16 comes with support for <a href="https://cmake.org/cmake/help/latest/command/target_precompile_headers.html">Precompile Headers</a>
 and <a href="https://cmake.org/cmake/help/latest/prop_tgt/UNITY_BUILD.html">Unity Builds</a>, which help reducing build times.</p>
 
-<p>Since CMake and Ninja have GitHub Releases, I decided to download those GitHub releases. <img alt="smile" src="/images/emoji/unicode/1f604.png" class="emoji"></p>
+<p>Since CMake and Ninja have GitHub Releases, I decided to download those GitHub releases. <img alt="smile" src="/images/smile.png" class="emoji"></p>
 
 <p>I used CMake as a scripting language, since the default scripting language for runners is <a href="https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#using-a-specific-shell">different</a> (bash, and powershell).
 CMake can execute processes, download files, extract archives.</p>
@@ -340,7 +342,7 @@ uploading it as a build artifact.</p>
  </figure></notextile></div>
 
 <p>I didn’t use CMake as scripting language, since this just involves calling CMake with parameters, and the
-default shells can handle this <img alt="smile" src="/images/emoji/unicode/1f604.png" class="emoji"></p>
+default shells can handle this <img alt="smile" src="/images/smile.png" class="emoji"></p>
 
 <h1 id="handling-releases">Handling Releases</h1>
 
