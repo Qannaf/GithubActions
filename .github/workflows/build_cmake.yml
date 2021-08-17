@@ -310,19 +310,4 @@ jobs:
         asset_path: ./${{ matrix.config.artifact }}
         asset_name: ${{ matrix.config.artifact }}
         asset_content_type: application/x-gtar
-        
-        - name: Setup OpenCppCoverage and add to PATh
-        id: setup_opencppcoverage
-        run: |
-          choco install OpenCppCoverage -y
-          echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
-      - name: Generate Report
-        id: generate_test_report
-        shell: cmd
-        run: OpenCppCoverage.exe --sources HelloCov --export_type cobertura:HelloCov.xml -- "vstest.console.exe" Debug\HelloTest.dll
-      - name: Upload Report to Codecov
-        uses: codecov/codecov-action@v1.3.2
-        with:
-          files: ./HelloCov.xml
-          fail_ci_if_error: true
-          functionalities: fix
+      
